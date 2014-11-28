@@ -9,6 +9,13 @@
 #include "bateria.h"
 
 #define TAMBUFF 75000
+
+static int img01(char *b, size_t s);
+static int img02(char *b, size_t s);
+static int img03(char *b, size_t s);
+static int img04(char *b, size_t s);
+static int imgfavicon(char *b, size_t s);
+static int imggit(char *b, size_t s);
  
 int segmento_inicial(char *b, size_t s){
 
@@ -911,7 +918,8 @@ int segmento_inicial(char *b, size_t s){
 	"<label id='dinamic_numprocessos'>"
     ,sizeof(buffer));
 
-    //cpu_resultado(buffer, sizeof(buffer));
+    //O carregamento inical da pagina se dá pelo cpu_usage que utiliza um sleep de 1 segundo
+    cpu_resultado(buffer, sizeof(buffer));
     numprocessos(buffer, sizeof(buffer));
 
     strncat(buffer, 
@@ -1037,7 +1045,7 @@ int segmento_final(char *b, size_t s){
     return 1;
 }
 
-int img01(char *b, size_t s){
+static int img01(char *b, size_t s){
 
     //buffer que conterá o texto
     char buffer[TAMBUFF];
@@ -1054,7 +1062,7 @@ int img01(char *b, size_t s){
 }
 
 
-int img02(char *b, size_t s){
+static int img02(char *b, size_t s){
 
     //buffer que conterá o texto
     char buffer[TAMBUFF];
@@ -1072,7 +1080,7 @@ int img02(char *b, size_t s){
 
 
 
-int img03(char *b, size_t s){
+static int img03(char *b, size_t s){
 
     //buffer que conterá o texto
     char buffer[TAMBUFF];
@@ -1089,7 +1097,7 @@ int img03(char *b, size_t s){
 }
 
 
-int imgfavicon(char *b, size_t s){
+static int imgfavicon(char *b, size_t s){
 
     //buffer que conterá o texto
     char buffer[TAMBUFF];
@@ -1106,7 +1114,7 @@ int imgfavicon(char *b, size_t s){
 }
 
 
-int img04(char *b, size_t s){
+static int img04(char *b, size_t s){
 
     //buffer que conterá o texto
     char buffer[TAMBUFF];
@@ -1123,7 +1131,7 @@ int img04(char *b, size_t s){
 }
 
 
-int imggit(char *b, size_t s){
+static int imggit(char *b, size_t s){
 
     //buffer que conterá o texto
     char buffer[TAMBUFF];

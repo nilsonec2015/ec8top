@@ -44,7 +44,7 @@ static int ev_handler(struct mg_connection *conn,
 		mg_send_header(conn, "Content-Type", "text/html");
 
 		//acrescenta as informações sobre o Uso da CPU
-		//cpu_resultado(buffer, sizeof(buffer));
+		cpu_resultado(buffer, sizeof(buffer));
 
 		//acrescenta as informações da quantidade de processos sendo executados.
 		numprocessos(buffer, sizeof(buffer));
