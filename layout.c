@@ -8,7 +8,7 @@
 #include "cpu_usage.h"
 #include "bateria.h"
 
-#define TAMBUFF 1090000
+#define TAMBUFF 75000
  
 int segmento_inicial(char *b, size_t s){
 
@@ -911,7 +911,7 @@ int segmento_inicial(char *b, size_t s){
 	"<label id='dinamic_numprocessos'>"
     ,sizeof(buffer));
 
-    cpu_resultado(buffer, sizeof(buffer));
+    //cpu_resultado(buffer, sizeof(buffer));
     numprocessos(buffer, sizeof(buffer));
 
     strncat(buffer, 
